@@ -1,0 +1,16 @@
+{
+  "scion_repository": "https://github.com/scionproto/scion.git",
+  "scion_commit": "2c6b1976644970af8ab003d54c288c08595cddc3",
+  "bazel_version": "9.1.1",
+  "containerlab_image": "ghcr.io/srl-labs/clab@sha256:402d4b75a5217aa3fde1d944f2b14745c83b151556cc41589517885760ead01d",
+  "bazelisk": {
+    "version": "1.30.0",
+    "url": "https://github.com/bazelbuild/bazelisk/releases/download/v1.30.0/bazelisk-linux-amd64",
+    "sha256": "a248ae2b2b62b5baebb748f6fba7203bff1a27e5d01b55399a8406744cb539e8"
+  },
+  "containerlab": {
+    "version": "0.83.0",
+    "url": "https://github.com/srl-labs/containerlab/releases/download/v0.83.0/containerlab_0.83.0_linux_amd64.tar.gz",
+    "sha256": "1ee43b8fd5979d8baa205e267480d69177f7461b2d1bf512df144800c08cfe2c"
+  }
+}

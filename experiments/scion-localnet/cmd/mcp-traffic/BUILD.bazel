@@ -1,0 +1,20 @@
+load("@rules_go//go:def.bzl", "go_library")
+load("//:scion.bzl", "scion_go_binary")
+
+go_library(
+    name = "lib",
+    srcs = ["main.go", "scion.go"],
+    importpath = "github.com/scionproto/scion/local_mcp_agent",
+    deps = [
+        "//pkg/daemon:go_default_library",
+        "//pkg/private/serrors:go_default_library",
+        "//pkg/snet:go_default_library",
+        "//pkg/snet/addrutil:go_default_library",
+        "//private/app/path:go_default_library",
+        "@com_github_quic_go_quic_go//:go_default_library",
+        "@com_github_quic_go_quic_go//http3:go_default_library",
+        "@org_golang_x_sys//unix:go_default_library",
+    ],
+)
+
+scion_go_binary(name = "agent", embed = [":lib"], visibility = ["//visibility:public"])
